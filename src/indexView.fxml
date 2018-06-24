@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indexController">
+   <children>
+      <ImageView fitHeight="560.0" fitWidth="900.0" layoutY="41.0" pickOnBounds="true">
+         <image>
+            <Image url="@../background.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="740.0" layoutY="571.0" text="Created by Khoa Phan" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="189.0" text="Please compare which mode you wish to choose words from," textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="245.0" layoutY="224.0" text="the last mode submitted wil be used." textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <HBox layoutX="305.0" layoutY="283.0" spacing="25.0">
+         <children>
+            <RadioButton fx:id="mode1" mnemonicParsing="false" onAction="#onSubmitClick" text="Sequential" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="mode" />
+               </toggleGroup>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="mode2" mnemonicParsing="false" onAction="#onSubmitClick" text="Parallel" textFill="WHITE" toggleGroup="$mode">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </HBox>
+      <VBox layoutX="110.0" layoutY="346.0" spacing="10.0">
+         <children>
+            <Label fx:id="time1" disable="true" text="Sequential time taken to choose words: " textFill="WHITE" underline="true" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="time2" disable="true" text="Parallel time taken to choose words: " textFill="WHITE" underline="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Button layoutX="104.0" layoutY="481.0" mnemonicParsing="false" onAction="#onLevelClick" prefHeight="30.0" prefWidth="700.0" text="PROCEED TO LEVEL SELECTOR">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="error" layoutX="120.0" layoutY="426.0" textFill="RED" wrapText="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="178.0" layoutY="84.0" text="Hangman Game" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="72.0" />
+         </font>
+      </Label>
+      <ToolBar prefHeight="20.0" prefWidth="900.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#onLoadClick" text="LOAD" />
+            <Region prefHeight="31.0" prefWidth="735.0" />
+            <Button mnemonicParsing="false" onAction="#onAboutClick" text="HELP" />
+            <Button mnemonicParsing="false" onAction="#onCloseClick" text="CLOSE" />
+        </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

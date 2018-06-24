@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="levelController">
+   <children>
+      <ImageView fitHeight="560.0" fitWidth="900.0" layoutY="40.0" pickOnBounds="true">
+         <image>
+            <Image url="@../background.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="178.0" layoutY="84.0" text="Hangman Game" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="72.0" />
+         </font>
+      </Label>
+      <Label layoutX="230.0" layoutY="189.0" text="Please choose a difficulty for the game." textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="741.0" layoutY="571.0" text="Created by Khoa Phan" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="102.0" layoutY="482.0" mnemonicParsing="false" onAction="#onStartClick" prefHeight="30.0" prefWidth="700.0" text="START GAME">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <VBox layoutX="379.0" layoutY="242.0" spacing="20.0">
+         <children>
+            <RadioButton fx:id="level1" mnemonicParsing="false" selected="true" text="Easy" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="difficulty" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="level2" mnemonicParsing="false" text="Moderate" textFill="WHITE" toggleGroup="$difficulty">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="level3" mnemonicParsing="false" text="Hard" textFill="WHITE" toggleGroup="$difficulty">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="level4" mnemonicParsing="false" text="Expert" textFill="WHITE" toggleGroup="$difficulty">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </VBox>
+      <ToolBar prefHeight="20.0" prefWidth="900.0">
+         <items>
+            <Button mnemonicParsing="false" onAction="#onLoadClick" text="LOAD" />
+            <Region prefHeight="30.0" prefWidth="681.0" />
+            <Button mnemonicParsing="false" onAction="#onAboutClick" text="HELP" />
+            <Button mnemonicParsing="false" onAction="#onBackClick" text="BACK" />
+            <Button mnemonicParsing="false" onAction="#onCloseClick" text="CLOSE" />
+         </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

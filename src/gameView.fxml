@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gameController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" layoutY="1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../background2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="560.0" fitWidth="450.0" layoutY="41.0" pickOnBounds="true">
+         <image>
+            <Image url="@../background.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="guessWord" layoutX="470.0" layoutY="494.0" prefHeight="83.0" prefWidth="416.0" text="_ _ _ _ _ _ _ _" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="difficultyLabel" layoutX="14.0" layoutY="100.0" text="Difficulty: Expert" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lifeLabel" layoutX="355.0" layoutY="100.0" text="Life: 10" textFill="#00ff28">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="gameLabel" layoutX="121.0" layoutY="424.0" text="GAME OVER" textFill="RED" underline="true" visible="false">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="50.0" layoutY="141.0" prefHeight="70.0" prefWidth="350.0" text="Guess the word by clicking on the letters below." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="statusLabel" layoutX="17.0" layoutY="477.0" prefHeight="35.0" prefWidth="416.0" text="You have ____! The word was: ________" textFill="WHITE" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <HBox layoutX="34.0" layoutY="211.0" spacing="10.0">
+         <children>
+            <Label fx:id="a" onMouseClicked="#onLetterClicked" text="A" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="b" onMouseClicked="#onLetterClicked" text="B" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="c" onMouseClicked="#onLetterClicked" text="C" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="d" onMouseClicked="#onLetterClicked" text="D" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="e" onMouseClicked="#onLetterClicked" text="E" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="f" onMouseClicked="#onLetterClicked" text="F" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="g" onMouseClicked="#onLetterClicked" text="G" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="h" onMouseClicked="#onLetterClicked" text="H" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="i" onMouseClicked="#onLetterClicked" text="I" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="j" onMouseClicked="#onLetterClicked" text="J" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="33.0" layoutY="281.0" spacing="10.0">
+         <children>
+            <Label fx:id="k" onMouseClicked="#onLetterClicked" text="K" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="l" onMouseClicked="#onLetterClicked" text="L" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="m" onMouseClicked="#onLetterClicked" text="M" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="n" onMouseClicked="#onLetterClicked" text="N" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="o" onMouseClicked="#onLetterClicked" text="O" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="p" onMouseClicked="#onLetterClicked" text="P" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="q" onMouseClicked="#onLetterClicked" text="Q" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="r" onMouseClicked="#onLetterClicked" text="R" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="s" onMouseClicked="#onLetterClicked" text="S" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="76.0" layoutY="351.0" spacing="10.0">
+         <children>
+            <Label fx:id="t" onMouseClicked="#onLetterClicked" text="T" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="u" onMouseClicked="#onLetterClicked" text="U" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="v" onMouseClicked="#onLetterClicked" text="V" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="w" onMouseClicked="#onLetterClicked" text="W" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label onMouseClicked="#onLetterClicked" text="X" textFill="WHITE" fx:id="x">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="y" onMouseClicked="#onLetterClicked" text="Y" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="z" onMouseClicked="#onLetterClicked" text="Z" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </HBox>
+      <ImageView fx:id="hangmanImage1" fitHeight="381.0" fitWidth="350.0" layoutX="507.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../hangman1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hangmanImage2" fitHeight="381.0" fitWidth="350.0" layoutX="507.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../hangman2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hangmanImage3" fitHeight="381.0" fitWidth="350.0" layoutX="506.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../hangman3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hangmanImage4" fitHeight="381.0" fitWidth="350.0" layoutX="507.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../hangman4.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hangmanImage5" fitHeight="381.0" fitWidth="350.0" layoutX="507.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../hangman5.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hangmanImage6" fitHeight="381.0" fitWidth="350.0" layoutX="507.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../hangman6.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hangmanImage7" fitHeight="381.0" fitWidth="350.0" layoutX="507.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../hangman7.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hangmanImage8" fitHeight="381.0" fitWidth="350.0" layoutX="506.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../hangman8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hangmanImage9" fitHeight="381.0" fitWidth="350.0" layoutX="506.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../hangman9.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hangmanImage10" fitHeight="381.0" fitWidth="350.0" layoutX="507.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../hangman10.png" />
+         </image>
+      </ImageView>
+      <ToolBar prefHeight="20.0" prefWidth="900.0">
+         <items>
+            <Button mnemonicParsing="false" onAction="#onSaveClick" text="SAVE" />
+            <Button mnemonicParsing="false" onAction="#onLoadClick" text="LOAD" />
+            <Button fx:id="playAgainBtn" mnemonicParsing="false" onAction="#onClickPlayAgain" text="PLAY AGAIN" />
+            <Button fx:id="newGameBtn" mnemonicParsing="false" onAction="#onClickNewGame" text="NEW GAME" />
+            <Region prefHeight="31.0" prefWidth="467.0" />
+            <Button mnemonicParsing="false" onAction="#onAboutClick" text="HELP" />
+            <Button mnemonicParsing="false" onAction="#onBackClick" text="BACK" />
+            <Button mnemonicParsing="false" onAction="#onCloseClick" text="CLOSE" />
+         </items>
+      </ToolBar>
+      <HBox layoutX="45.0" layoutY="475.0" spacing="15.0" />
+      <Label fx:id="loadInfoLabel" layoutX="472.0" layoutY="568.0" text="Click on the letters again if they are not disabled but are displayed." textAlignment="CENTER" textFill="WHITE" visible="false" wrapText="true">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

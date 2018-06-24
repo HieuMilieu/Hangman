@@ -6,7 +6,7 @@ To play the game, simply `git clone` the repo and then execute the .jar file
 
 ## Features:
 
-- Users to load the game text files sequentially or in Parallel
+- Users to load the game text files sequentially or in parallel
 - Users can load/save game status
 - Users can select 4 different levels of difficulty
 
